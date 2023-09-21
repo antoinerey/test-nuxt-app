@@ -1,0 +1,20 @@
+{
+  "name": "test-monorepo",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --filter @test/front-office",
+    "preview": "node ./apps/front-office/.output/server/index.mjs"
+  },
+  "volta": {
+    "node": "18.18.0"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.14"
+  }
+}
