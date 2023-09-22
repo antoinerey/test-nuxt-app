@@ -16,6 +16,14 @@ All of that is working fine, with no issue we currently have on front-apps.
 
 ```sh
 npm install
+
+cd packages/logger
+npm run dev:prepare
+npm run build
+
+cd ../../apps/front-office
+npx nuxt prepare
+npm run dev
 ```
 
 ## Building & Previewing
